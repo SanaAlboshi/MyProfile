@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <style>
     /* ── LAPTOP ANIMATION STYLES ── */
+    
 .name-wrapper {
   display: inline-flex;
   align-items: center;
@@ -660,8 +661,13 @@ section.visible { opacity:1; transform:translateY(0); }
       <h1 class="hero-name">
         Sana <span class="line2">Alboshi</span>
       </h1>
-      <p class="hero-desc">Computer Science graduate specialized in Python & Django. Alumna of Tuwaiq Academy with a focus on building interactive, high-performance web systems.</p>
-    </div>
+<p class="hero-desc">
+  <span>Computer Science graduate specializing in Python and Django.</span>
+  <span>Graduate of the Web Development Bootcamp at Tuwaiq Academy.</span>
+  <span>Experienced in developing interactive, high-performance web applications.</span>
+  <span>Combining robust backend systems with intuitive user interfaces.</span>
+  <span>Committed to continuous growth and creating efficient, scalable digital solutions.</span>
+</p>    </div>
 
     <div class="hero-visual-side">
       <div class="laptop-visual-container">
@@ -697,8 +703,9 @@ section.visible { opacity:1; transform:translateY(0); }
       <h3>Web Development</h3>
       <div class="company">Tuwaiq Academy - Riyadh &nbsp;·&nbsp; Oct 2025 – Dec 2025 </div>
       <ul>
-        <li>Developed full-stack web applications using Python and Django.</li>
-        <li>Built responsive interfaces with HTML, CSS, JavaScript, and UI/UX design principles.</li>
+        <li>Developed web applications with Python and Django</li>
+        <li>Built responsive web interfaces with HTML, CSS, JavaScript, and UI/UX design</li>
+        <li>Gained hands-on experience in front-end and back-end development</li>
       </ul>
     </div>
     <div class="exp-item" style="margin-bottom:0">
@@ -724,8 +731,8 @@ section.visible { opacity:1; transform:translateY(0); }
       <div class="skill-chip"><i class="devicon-django-plain"></i><span>Django</span></div>
       <div class="skill-chip"><i class="devicon-java-plain"></i><span>Java</span></div>
       <div class="skill-chip"><i class="devicon-javascript-plain"></i><span>JavaScript</span></div>
-      <div class="skill-chip"><i class="devicon-html5-plain"></i><span>HTML5</span></div>
-      <div class="skill-chip"><i class="devicon-css3-plain"></i><span>CSS3</span></div>
+      <div class="skill-chip"><i class="devicon-html5-plain"></i><span>HTML</span></div>
+      <div class="skill-chip"><i class="devicon-css3-plain"></i><span>CSS</span></div>
     </div>
   </div>
 
@@ -809,11 +816,12 @@ section.visible { opacity:1; transform:translateY(0); }
       </div>
     </div>
 
-    <div class="proj-card" onclick="openProject('realestate')">
-      <img src=" static/imga.png" alt="Real Estate" class="proj-thumb" onerror="this.style.background='#1a1917';this.style.height='220px';this.removeAttribute('src')">
+
+<div class="proj-card" onclick="openProject('taibah')">
+      <img src=" static/imgl.png" alt="Taibah Map" class="proj-thumb" onerror="this.style.background='#1a1917';this.style.height='220px';this.removeAttribute('src')">
       <div class="proj-overlay">
-        <div class="proj-name">Real Estate Platform</div>
-        <button class="proj-btn" onclick="openProject('realestate')">
+        <div class="proj-name">Interactive University Map</div>
+        <button class="proj-btn" onclick="openProject('taibah')">
           View Details
           <svg viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.2"/></svg>
         </button>
@@ -830,18 +838,17 @@ section.visible { opacity:1; transform:translateY(0); }
         </button>
       </div>
     </div>
-
-    <div class="proj-card" onclick="openProject('taibah')">
-      <img src=" static/imgl.png" alt="Taibah Map" class="proj-thumb" onerror="this.style.background='#1a1917';this.style.height='220px';this.removeAttribute('src')">
+    <div class="proj-card" onclick="openProject('realestate')">
+      <img src=" static/imga.png" alt="Real Estate" class="proj-thumb" onerror="this.style.background='#1a1917';this.style.height='220px';this.removeAttribute('src')">
       <div class="proj-overlay">
-        <div class="proj-name">Interactive University Map</div>
-        <button class="proj-btn" onclick="openProject('taibah')">
+        <div class="proj-name">Real Estate Platform</div>
+        <button class="proj-btn" onclick="openProject('realestate')">
           View Details
           <svg viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" stroke-width="1.2"/></svg>
         </button>
       </div>
     </div>
-
+    
   </div>
 </section>
 
@@ -918,37 +925,8 @@ const projects = {
         `,
         stack: ['Django', 'Geofencing','Python', 'HTML','CSS','JS', 'Mapping APIs', 'SQL', 'Figma ']
     },
-    planteer: {
-        num: '02 / 04', 
-        title: 'Planteer - Botanical Community Platform', 
-        img: 'static/planteer.jpg',
-        desc: `
-            <div style="margin-bottom:20px">
-                <h4 style="color:var(--gold-dim); margin-bottom:8px; font-size:0.9rem">Project Ecosystem</h4>
-                <p style="font-size:0.8rem; line-height:1.6; color:var(--text-dim)">
-                    A full-stack solution designed for plant enthusiasts to document biodiversity. The project focuses on "Crowdsourced Data," allowing users to build a global botanical directory.
-                </p>
-            </div>
-
-            <div style="margin-bottom:20px">
-                <h4 style="color:var(--gold-dim); margin-bottom:8px; font-size:0.9rem">Advanced Functional Requirements</h4>
-                <ul style="padding-left:15px; font-size:0.75rem; color:var(--text-dim); line-height:1.8">
-                    <li><b>User Authentication:</b> Robust registration system with personalized dashboards for managing contributions.</li>
-                    <li><b>Dynamic Content Management:</b> Full CRUD capabilities for adding plants, high-res images, and detailed care instructions.</li>
-                    <li><b>Smart Multi-Level Filtering:</b> Users can filter the entire database by plant category, country of origin, and growth climate.</li>
-                    <li><b>Community Interaction:</b> Integrated feedback system and botanical classification tags.</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 style="color:var(--gold-dim); margin-bottom:8px; font-size:0.9rem">UI/UX Strategy</h4>
-                <p style="font-size:0.8rem; color:var(--text-dim)">Implementation of a responsive "Card-Based" layout with smooth CSS transitions to enhance the browsing experience of botanical data.</p>
-            </div>
-        `,
-        stack: ['Python', 'Django', 'HTML','CSS','JS', 'SQL', 'Figma']
-    },
     taibah: {
-        num: '03 / 04', 
+        num: '02 / 04', 
         title: 'Taibah Interactive Navigation', 
         img: 'static/imgl.png',
         desc: `
@@ -976,6 +954,36 @@ const projects = {
         `,
         stack: ['Visual Studio Code','HTML',' CSS','JS' , 'Google Sheets', 'OpenStreetMap', 'Bootstrap','Mapme','Mppedin','Figma']
     },
+    planteer: {
+        num: '02 / 03', 
+        title: 'Planteer - Botanical Community Platform', 
+        img: 'static/planteer.jpg',
+        desc: `
+            <div style="margin-bottom:20px">
+                <h4 style="color:var(--gold-dim); margin-bottom:8px; font-size:0.9rem">Project Ecosystem</h4>
+                <p style="font-size:0.8rem; line-height:1.6; color:var(--text-dim)">
+                    A full-stack solution designed for plant enthusiasts to document biodiversity. The project focuses on "Crowdsourced Data," allowing users to build a global botanical directory.
+                </p>
+            </div>
+
+            <div style="margin-bottom:20px">
+                <h4 style="color:var(--gold-dim); margin-bottom:8px; font-size:0.9rem">Advanced Functional Requirements</h4>
+                <ul style="padding-left:15px; font-size:0.75rem; color:var(--text-dim); line-height:1.8">
+                    <li><b>User Authentication:</b> Robust registration system with personalized dashboards for managing contributions.</li>
+                    <li><b>Dynamic Content Management:</b> Full CRUD capabilities for adding plants, high-res images, and detailed care instructions.</li>
+                    <li><b>Smart Multi-Level Filtering:</b> Users can filter the entire database by plant category, country of origin, and growth climate.</li>
+                    <li><b>Community Interaction:</b> Integrated feedback system and botanical classification tags.</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 style="color:var(--gold-dim); margin-bottom:8px; font-size:0.9rem">UI/UX Strategy</h4>
+                <p style="font-size:0.8rem; color:var(--text-dim)">Implementation of a responsive "Card-Based" layout with smooth CSS transitions to enhance the browsing experience of botanical data.</p>
+            </div>
+        `,
+        stack: ['Python', 'Django', 'HTML','CSS','JS', 'SQL', 'Figma']
+    },
+    
     realestate: {
         num: '04 / 04', 
         title: 'Premium Real Estate Engine', 
