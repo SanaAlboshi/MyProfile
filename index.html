@@ -716,6 +716,41 @@ body.light .meta {
 body.light .sec-title {
   color: #563a23 !important;
 }
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .theme-toggle,
+  .menu-toggle {
+    position: static;
+  }
+
+
+
+
+@media (max-width: 768px) {
+
+  .nav-right {
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .theme-toggle,
+  .menu-toggle {
+    position: static !important;
+    margin: 0 !important;
+  }
+
+  .menu-toggle {
+    display: flex !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -726,11 +761,15 @@ body.light .sec-title {
 <nav>
   <a href="#about" class="logo">Sana <em>Alboshi</em></a>
 
+ <div class="nav-right">
+  <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">☀️</button>
+
   <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
     <span class="bar"></span>
     <span class="bar"></span>
     <span class="bar"></span>
   </div>
+</div>
 
   <ul class="nav-links" id="nav-list">
     <li><a href="#about" onclick="toggleMenu()">About</a></li>
@@ -741,7 +780,6 @@ body.light .sec-title {
     <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
   </ul>
 
-  <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">☀️</button>
 </nav>
 <!-- HERO -->
 <section id="about">
@@ -1216,20 +1254,12 @@ window.addEventListener("load", () => {
     } else {
         btn.textContent = "☀️";
     }
+
+
+    
 });
 
-// التبديل
-function toggleTheme() {
-    document.body.classList.toggle("light");
 
-    if (document.body.classList.contains("light")) {
-        localStorage.setItem("theme", "light");
-        btn.textContent = "🌙"; // في اللايت يظهر قمر
-    } else {
-        localStorage.setItem("theme", "dark");
-        btn.textContent = "☀️"; // في الدارك يظهر شمس
-    }
-}
 
 </script>
 </body>
